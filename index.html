@@ -1,48 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Yuliia Plaksytska | QA Automation Practice</title>
-  <link rel="stylesheet" href="css/style.css" />  <!-- Now matches the shared CSS -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yuliia Plaksytska | QA Automation Practice</title>
+    <link rel="stylesheet" href="css/style.css" /> <!-- Now matches the shared CSS -->
 </head>
+
 <body>
-  <header>
-    <div class="container header-flex">
-      <h1>QA Automation Practice Site</h1>
-      <div class="header-right">
-        <span class="greeting">Welcome, <strong id="welcome-user">Guest</strong>!</span>
-        <button id="theme-toggle" aria-label="Toggle dark/light mode">Dark Mode Toggle</button>
-      </div>
-    </div>
-  </header>
+    <header>
+        <div class="container header-flex">
+            <h1>QA Automation Practice Site</h1>
+            <div class="header-right">
+                <span class="greeting">Welcome, <strong id="welcome-user">Guest</strong>!</span>
+                <button id="theme-toggle" aria-label="Toggle dark/light mode">Dark Mode Toggle</button>
+            </div>
+        </div>
+    </header>
 
-  <main class="container">
-    <section class="hero">
-      <h2>Hi, I'm Yuliia Plaksytska</h2>
-      <p>This is a <strong>static frontend-only</strong> website designed specifically for practicing automation testing (Selenium, Cypress, Playwright, etc.).</p>
-      <p>All features work with <strong>localStorage</strong> — no backend required!</p>
-    </section>
+    <main class="container">
+        <section class="hero">
+            <h2>Hi, I'm Yuliia Plaksytska</h2>
+            <p>This is a <strong>static frontend-only</strong> website designed specifically for practicing automation
+                testing (Selenium, Cypress, Playwright, etc.).</p>
+            <p>All features work with <strong>localStorage</strong> — no backend required!</p>
+        </section>
+        <section class="resume-section">
+            <h3>About Me</h3>
+            <div class="cards">
+                <a href="personal-information.html" class="card">
+                    <h4>Personal Resume</h4>
+                    <p>Dynamic content for assertions: Experience, skills, certifications, and contact details from
+                        Yuliia Plaksytska's profile</p>
+                </a>
+            </div>
+        </section>
 
-    <section class="practice-links">
-      <h3>Practice Pages</h3>
-      <div class="cards">
-        <a href="login.html" class="card">
-          <h4>Login Form</h4>
-          <p>Test valid/invalid credentials, form validation, alerts</p>
-        </a>
-        <a href="todo.html" class="card">
-          <h4>To-Do List</h4>
-          <p>Add, complete, delete tasks + summary counters + persistence</p>
-        </a>
-        <a href="nonexistent.html" class="card">
-          <h4>404 Error Page</h4>
-          <p>Trigger custom 404 page via broken link</p>
-        </a>
-      </div>
-    </section>
-  </main>
+        <section class="practice-links">
+            <h3>Practice Pages</h3>
+            <div class="cards">
+                <a href="login.html" class="card">
+                    <h4>Login Form</h4>
+                    <p>Test valid/invalid credentials, form validation, alerts</p>
+                </a>
+                <a href="todo.html" class="card">
+                    <h4>To-Do List</h4>
+                    <p>Add, complete, delete tasks + summary counters + persistence</p>
+                </a>
+                <a href="nonexistent.html" class="card">
+                    <h4>404 Error Page</h4>
+                    <p>Trigger custom 404 page via broken link</p>
+                </a>
+            </div>
+        </section>
+    </main>
 
-  <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
