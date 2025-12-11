@@ -74,58 +74,75 @@ Opens interactive report with:
 
 The Playwright configuration lives in tests/playwright.config.js, and the Node/Playwright dependencies for the tests are defined in tests/package.json. The tests use a shared PageManager (tests/pom-manager/PageManager.js) and fixtures (tests/fixtures/fixtures.js) to expose typed page objects (IndexPage, LoginPage, TodoPage, PersonalInfoPage).
 
-walkingmaze/
+## Project Structure
+
+📄 Root Files
+├── README.md Main project documentation
+├── .nojekyll Disable Jekyll for GitHub Pages
+├── .gitignore Git ignore rules
+
+
+QA Practice Site (Static HTML/JS App)
+├── index.html Home page
+├── login.html Login page
+├── todo.html Todo list page
+├── personal-information.html Personal info page
+├── nonexistent.html 404 test page
 │
-├── 📄 README.md                          # Main project documentation
-├── 📄 .nojekyll                          # Disable Jekyll for GitHub Pages
-├── 📄 .gitignore
-├── 📄 package.json                       # Root dependencies
-├── 📄 playwright.config.js               # Playwright config (if at root)
+├── js/
+│ └── script.js App logic (auth, todos, theme)
 │
-├── 🌐 index.html                         # Home page (QA practice site)
-├── 🌐 login.html                         # Login page
-├── 🌐 todo.html                          # Todo list page
-├── 🌐 personal-information.html          # Personal info page (optional)
-├── 🌐 nonexistent.html                   # 404 test page
+└── css/
+└── style.css App styling
+
+Playwright Test Suite
+tests/
+├── specs/ Test files
+│ ├── login.spec.js
+│ ├── todo.spec.js
+│ ├── theme.spec.js
+│ ├── navigation.spec.js
+│ ├── selectors.spec.js
+│ ├── assertions.spec.js
+│ └── end-to-end.spec.js
 │
-├── 📁 js/
-│   └── script.js                         # Main app JavaScript (auth, todos, theme)
+├── pages/ Page Object Model
+│ ├── BasePage.js Base class
+│ ├── IndexPage.js Home page object
+│ ├── LoginPage.js Login page object
+│ ├── TodoPage.js Todo page object
+│ └── PersonalInfoPage.js Personal info page object
 │
-├── 📁 css/
-│   └── style.css                         # App styling
+├── fixtures/ Test setup & configuration
+│ └── fixtures.js PageManager, test fixtures
 │
-├── 📁 tests/                             # All Playwright tests here
-│   │
-│   ├── 📁 specs/                         # Test files (.spec.js)
-│   │   ├── login.spec.js                 # Login form tests
-│   │   ├── todo.spec.js                  # Todo CRUD tests
-│   │   ├── theme.spec.js                 # Theme toggle tests
-│   │   ├── navigation.spec.js            # Page navigation tests
-│   │   ├── selectors.spec.js             # Selector practice tests
-│   │   ├── assertions.spec.js            # Assertion practice tests
-│   │   └── end-to-end.spec.js            # Full user flow tests
-│   │
-│   ├── 📁 pages/                         # Page Object Model classes
-│   │   ├── BasePage.js                   # Base class (common methods)
-│   │   ├── IndexPage.js                  # Home page object
-│   │   ├── LoginPage.js                  # Login page object
-│   │   ├── TodoPage.js                   # Todo page object
-│   │   └── PersonalInfoPage.js           # Personal info page object
-│   │
-│   ├── 📁 fixtures/                      # Playwright fixtures & setup
-│   │   └── fixtures.js                   # PageManager, test fixtures, hooks
-│   │
-│   ├── 📁 utils/                         # Test data & helpers
-│   │   ├── testData.js                   # TEST_DATA, SELECTORS constants
-│   │   └── helpers.js                    # Utility functions (optional)
-│   │
-│   ├── 📄 playwright.config.js           # Playwright configuration
-│   ├── 📄 package.json                   # Test-specific dependencies
-│   └── 📁 playwright-report/             # Generated HTML reports (gitignored)
-│       └── index.html
+├── utils/ Test data & helpers
+│ ├── testData.js Selectors, test data constants
+│ └── helpers.js Utility functions
 │
-├── 📁 .github/workflows/
-│   ├── test.yml
+├── playwright.config.js Playwright configuration
+├── package.json Test dependencies
+│
+└── playwright-report/ Generated HTML reports
+└── index.html (gitignored)
+
+CI/CD
+.github/workflows/
+├── test.yml Playwright test runner
+└── pages.yml GitHub Pages deployment
+
+### Directory Breakdown
+
+| Directory | Purpose |
+|-----------|---------|
+| `tests/specs/` | Test files (login, todo, navigation, etc.) |
+| `tests/pages/` | Page objects for each page (POM pattern) |
+| `tests/fixtures/` | Shared test setup & PageManager |
+| `tests/utils/` | Selectors, test data, helper functions |
+| `.github/workflows/` | GitHub Actions CI/CD |
+| `js/` | App JavaScript (not tests) |
+| `css/` | App styling (not tests) |
+
 
 **CI Pipeline:**
 GitHub Actions is configured in .github/workflows/test.yml to run the full Playwright suite on every push and pull request to main on an ubuntu-latest runner. This ensures tests are executed consistently in CI as well as locally.
