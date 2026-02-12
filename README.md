@@ -79,8 +79,7 @@ The Playwright configuration lives in tests/playwright.config.js, and the Node/P
 Root Files
 ├── README.md Main project documentation
 ├── .nojekyll Disable Jekyll for GitHub Pages
-├── .gitignore Git ignore rules
-
+└── .gitignore Git ignore rules
 
 QA Practice Site (Static HTML/JS App)
 ├── index.html Home page
@@ -96,40 +95,38 @@ QA Practice Site (Static HTML/JS App)
 └── style.css App styling
 
 Playwright Test Suite
-tests/
-├── specs/ Test files
-│ ├── login.spec.js
-│ ├── todo.spec.js
-│ ├── theme.spec.js
-│ ├── navigation.spec.js
-│ ├── selectors.spec.js
-│ ├── assertions.spec.js
-│ └── end-to-end.spec.js
-│
-├── pages/ Page Object Model
-│ ├── BasePage.js Base class
-│ ├── IndexPage.js Home page object
-│ ├── LoginPage.js Login page object
-│ ├── TodoPage.js Todo page object
-│ └── PersonalInfoPage.js Personal info page object
-│
-├── fixtures/ Test setup & configuration
-│ └── fixtures.js PageManager, test fixtures
-│
-├── utils/ Test data & helpers
-│ ├── testData.js Selectors, test data constants
-│ └── helpers.js Utility functions
-│
-├── playwright.config.js Playwright configuration
-├── package.json Test dependencies
-│
-└── playwright-report/ Generated HTML reports
-└── index.html (gitignored)
-
-CI/CD
-.github/workflows/
-├── test.yml Playwright test runner
-└── pages.yml GitHub Pages deployment
+├── tests/
+│ ├── specs/ Test files
+│ │ ├── login.spec.js
+│ │ ├── todo.spec.js
+│ │ ├── theme.spec.js
+│ │ ├── navigation.spec.js
+│ │ ├── selectors.spec.js
+│ │ ├── assertions.spec.js
+│ │ └── end-to-end.spec.js
+│ │
+│ ├── pages/ Page Object Model
+│ │ ├── BasePage.js Base class
+│ │ ├── IndexPage.js Home page object
+│ │ ├── LoginPage.js Login page object
+│ │ ├── TodoPage.js Todo page object
+│ │ └── PersonalInfoPage.js Personal info page object
+│ │
+│ ├── fixtures/ Test setup & configuration
+│ │ └── fixtures.js PageManager, test fixtures
+│ │
+│ ├── utils/ Test data & helpers
+│ │ ├── testData.js Selectors, test data constants
+│ │ └── helpers.js Utility functions
+│ │
+│ ├── playwright.config.js Playwright configuration
+│ ├── package.json Test dependencies
+│ ├── playwright-report/ Generated HTML reports
+│ │ └── index.html (gitignored)
+│ │
+│ └── .github/workflows/
+│ ├── test.yml Playwright test runner
+│ └── pages.yml GitHub Pages deployment
 
 ### Directory Breakdown
 
