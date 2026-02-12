@@ -181,7 +181,7 @@ await loginPage.login('admin', 'password123');
 
 **Result:** Balanced approach—shared utilities reduce duplication while tests stay simple and focused.
 
-### 🔧 Why Fixtures Matter
+### Why Fixtures Matter
 
 Playwright fixtures (`tests/fixtures/fixtures.js`) provided a **centralized test setup**:
 
