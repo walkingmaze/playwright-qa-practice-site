@@ -76,57 +76,42 @@ The Playwright configuration lives in tests/playwright.config.js, and the Node/P
 
 ## Project Structure
 
-Root Files
-├── README.md Main project documentation
-├── .nojekyll Disable Jekyll for GitHub Pages
-└── .gitignore Git ignore rules
+## Project Structure
 
-QA Practice Site (Static HTML/JS App)
-├── index.html Home page
-├── login.html Login page
-├── todo.html Todo list page
-├── personal-information.html Personal info page
-├── nonexistent.html 404 test page
-│
-├── js/
-│ └── script.js App logic (auth, todos, theme)
-│
-└── css/
-└── style.css App styling
+### Root Files
+| File | Description |
+|------|-------------|
+| `README.md` | Main project documentation |
+| `.nojekyll` | Disable Jekyll for GitHub Pages |
+| `.gitignore` | Git ignore rules |
 
-Playwright Test Suite
-├── tests/
-│ ├── specs/ Test files
-│ │ ├── login.spec.js
-│ │ ├── todo.spec.js
-│ │ ├── theme.spec.js
-│ │ ├── navigation.spec.js
-│ │ ├── selectors.spec.js
-│ │ ├── assertions.spec.js
-│ │ └── end-to-end.spec.js
-│ │
-│ ├── pages/ Page Object Model
-│ │ ├── BasePage.js Base class
-│ │ ├── IndexPage.js Home page object
-│ │ ├── LoginPage.js Login page object
-│ │ ├── TodoPage.js Todo page object
-│ │ └── PersonalInfoPage.js Personal info page object
-│ │
-│ ├── fixtures/ Test setup & configuration
-│ │ └── fixtures.js PageManager, test fixtures
-│ │
-│ ├── utils/ Test data & helpers
-│ │ ├── testData.js Selectors, test data constants
-│ │ └── helpers.js Utility functions
-│ │
-│ ├── playwright.config.js Playwright configuration
-│ ├── package.json Test dependencies
-│ ├── playwright-report/ Generated HTML reports
-│ │ └── index.html (gitignored)
-│ │
-│ └── .github/workflows/
-│ ├── test.yml Playwright test runner
-│ └── pages.yml GitHub Pages deployment
+### QA Practice Site (Static HTML/JS App)
+| File/Folder | Description |
+|-------------|-------------|
+| `index.html` | Home page |
+| `login.html` | Login page |
+| `todo.html` | Todo list page |
+| `personal-information.html` | Personal info page |
+| `nonexistent.html` | 404 test page |
+| `js/script.js` | App logic (auth, todos, theme) |
+| `css/style.css` | App styling |
+
+### Playwright Test Suite
+| Folder/File | Description |
+|-------------|-------------|
+| `tests/specs/` | Test files |
+| `tests/pages/` | Page Object Model |
+| `tests/fixtures/fixtures.js` | PageManager, test fixtures |
+| `tests/utils/` | Test data & helpers |
+| `tests/playwright.config.js` | Playwright configuration |
+| `tests/package.json` | Test dependencies |
+| `tests/playwright-report/` | Generated HTML reports (gitignored) |
+
+### CI/CD
+| File | Description |
+|------|-------------|
+| `.github/workflows/test.yml` | Playwright test runner |
+| `.github/workflows/pages.yml` | GitHub Pages deployment |
 
 ### Directory Breakdown
 
