@@ -48,6 +48,7 @@ Install Playwright browsers:
  - npx playwright install
 
 **Run Tests:**
+
 Headless mode (fast):
  - npx playwright test
 
