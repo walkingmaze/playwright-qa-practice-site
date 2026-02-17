@@ -28,7 +28,7 @@ export const TEST_DATA = {
   
   // URLs
   urls: {
-    base: 'https://walkingmaze.github.io/walkingmaze/',
+    base: 'https://walkingmaze.github.io/playwright-qa-practice-site/',
     login: 'login.html',
     todo: 'todo.html',
     personalInfo: 'personal-information.html',
