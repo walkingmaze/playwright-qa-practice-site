@@ -38,27 +38,27 @@ The site itself lives in the project root as static files (index.html, login.htm
 
 **Setup:**
 Clone repository:
-git clone https://github.com/walkingmaze/walkingmaze.git
-cd walkingmaze
+ - git clone https://github.com/walkingmaze/walkingmaze.git
+ - cd walkingmaze
 
 Install dependencies:
-npm ci
+ - npm ci
 
 Install Playwright browsers:
-npx playwright install
+ - npx playwright install
 
 **Run Tests:**
-Headless mode (fast)
-npx playwright test
+ - Headless mode (fast)
+ - npx playwright test
 
-Headed mode (see browser)
-npx playwright test --headed
+ - Headed mode (see browser)
+ - npx playwright test --headed
 
-Debug mode (step-through)
-npx playwright test --debug
+ - Debug mode (step-through)
+ - npx playwright test --debug
 
-Run single file
-npx playwright test tests/specs/todo.spec.js
+ - Run single file
+ - npx playwright test tests/specs/todo.spec.js
 
 **HTML Report:**
 Generated automatically after test run:
