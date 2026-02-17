@@ -37,14 +37,14 @@ The site itself lives in the project root as static files (index.html, login.htm
 - npm
 
 **Setup:**
-Clone repository
+Clone repository:
 git clone https://github.com/walkingmaze/walkingmaze.git
 cd walkingmaze
 
-Install dependencies
+Install dependencies:
 npm ci
 
-Install Playwright browsers
+Install Playwright browsers:
 npx playwright install
 
 **Run Tests:**
